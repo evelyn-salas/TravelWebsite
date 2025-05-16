@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+  Name: Evelyn Salas & Lisa Ynineb
+  Date: 12/09/2024
+  Section: CSE 154 AB
+  This index.html file creates a web page for booking a flight
+  This page provides a user interface for looking at the destinations offered,
+  searching flights, leaving feedback on airlines, and managing user interactions
+  like sign-ins and sign-ups
+-->
+<html lang="en">
+  <head>
+    <title>Book a flight</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1> Seattle: Gateway to Adventure</h1>
+      <div class="button-container">
+        <button id="signin">
+          <img src="user.png" alt="user icon">
+          <span>Sign in</span>
+        </button>
+        <button id="signup">
+          <img src="user.png" alt="user icon">
+          <span>Sign up</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="transaction-history" class="hidden"></section>
+      <section id="feedback" class="hidden">
+        <div class="airline" id="service">
+          <h3>Airline Feedback</h3>
+          <!-- <p>Average Rating: <span id="average-rating-service">4.5</span></p> -->
+          <form id="feedback-form">
+            <label for="rating">Rate this Airline:</label>
+            <select id="airline">
+              <option value="1">Aeromexico</option>
+              <option value="2">Air Canada</option>
+              <option value="3">Air China</option>
+              <option value="4">Air France</option>
+              <option value="5">Air Transat</option>
+              <option value="6">Alaska Airlines</option>
+              <option value="7">American Airlines</option>
+              <option value="8">Azul</option>
+              <option value="9">British Airways</option>
+              <option value="10">China Eastern Airlines</option>
+              <option value="11">China Southern Airlines</option>
+              <option value="12">Croatia Airlines</option>
+              <option value="13">Delta Airlines</option>
+              <option value="14">EasyJet</option>
+              <option value="15">Emirates</option>
+              <option value="16">Etihad Airways</option>
+              <option value="17">Gol Airlines</option>
+              <option value="18">Hainan Airlines</option>
+              <option value="19">Interjet</option>
+              <option value="20">JetBlue</option>
+              <option value="21">Jetstar Airways</option>
+              <option value="22">LATAM</option>
+              <option value="23">Lufthansa</option>
+              <option value="24">Qantas</option>
+              <option value="25">Qatar Airways</option>
+              <option value="26">Ryanair</option>
+              <option value="27">South African Airways</option>
+              <option value="28">Spring Airlines</option>
+              <option value="29">United Airlines</option>
+              <option value="30">Virgin Atlantic</option>
+              <option value="31">Virgin Australia</option>
+              <option value="32">Volaris</option>
+              <option value="33">Westjet</option>
+            </select>
+            <label for="rating">What was your experience with this airline?</label>
+            <select id="rating">
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Very Good</option>
+              <option value="3">3 - Good</option>
+              <option value="2">2 - Fair</option>
+              <option value="1">1 - Poor</option>
+            </select>
+            <label for="comment">Leave a comment (optional):</label>
+            <textarea id="comment"></textarea>
+            <div>
+              <button type="submit" class="submit-btn">Submit Feedback</button>
+            </div>
+          </form>
+          <div id="feedback-list" class="feedback-list">
+            <!-- User reviews will populate here -->
+          </div>
+        </div>
+      </section>
+      <section id="search">
+        <h2>Explore the globe, one step at a time </h2>
+      <section id="container"></section>
+      <button id="toggle">Switch view</button>
+      </section>
+      <section id="searchbox">
+        <h2>Where do you want to go?</h2>
+        <select id="departure" required>
+          <option value="">Seattle</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Type a city destination" required>
+        <div class="date-picker-container">
+          <label for="datedep">Date of Departure:</label>
+          <input type="date" id="datedep" required>
+        </div>
+        <div class="nbpeople-container">
+          <label for="nbpeople">Number of people</label>
+          <select id="nbpeople">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <button id="research">Search</button>
+      </section>
+      <div id="custom-confirm-modal" class="modal hidden">
+        <div class="modal-content">
+          <p id="modal-message"></p>
+          <button id="confirm-yes">Yes</button>
+          <button id="confirm-no">No</button>
+        </div>
+      </div>
+      <section id="result" class="hidden">
+        <p id="error-message"></p>
+        <div id="flightscontainer"></div>
+        <button id="destinations">Wanna see the destinations offered ?</button>
+      </section>
+    </main>
+  </body>
+</html>

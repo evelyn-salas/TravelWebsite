@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+  Name: Evelyn Salas & Lisa Ynineb
+  Date: 12/09/2024
+  Section: CSE 154 AB
+  This create-account.html file creates a web page for creating a flight account.
+  This page provides a user interface for creating an account with necessary personal details,
+  and then offers a link to the login page once the account is created.
+-->
+<html lang="en">
+  <head>
+    <title>Seattle: Gateway to Adventure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <script src="createaccount.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1> Create an Account </h1>
+      <div class="button-container"></div>
+      <button id="menu">Menu</button>
+    </header>
+    <main>
+      <h2>We need to know you</h2>
+      <form id="form">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="username" placeholder="example@example.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter a strong password"
+        required>
+
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+
+        <label for="phone-number">Phone Number</label>
+        <input type="tel" id="phone-number" name="phone-number" placeholder="123-456-7890" required>
+
+        <button>Submit!</button>
+      </form>
+      <p id="message"></p>
+      <h2>Now you can log in!</h2>
+      <p><a href="signin.html">
+        Click here to log into your brand new account!
+      </a></p>
+    </main>
+  </body>
+</html>

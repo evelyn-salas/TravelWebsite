@@ -1,0 +1,82 @@
+/*
+  Name: Evelyn Salas & Lisa Ynineb
+  Date: 12/09/2024
+  Section: CSE 154 AB
+  This is the styleaccount.css page that is used to style the account page of the website.
+  The main theme is still blue, for the color of the sky.
+  You can find here the styling for the account page, which a user has access to after logging in.
+  The only thing that stands out here is the log out button, in red.
+*/
+
+body {
+  background-color: #1A3C5A;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h1, details {
+  text-align: center;
+  background-color: #87CEEB;
+  color: #1A3C5A;
+  border-radius: 20px;
+}
+
+details {
+  padding: 20px;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 65px;
+  right: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#menu {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button#menu:hover {
+  background-color: #0056B3;
+}
+
+#log {
+  background-color: #FF4C4C;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#log:hover {
+  background-color: #FF1A1A;
+  transform: scale(1.05);
+}
+
+#log:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
